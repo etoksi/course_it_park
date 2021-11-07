@@ -6,14 +6,12 @@ public class MainMath {
 
         ScannerNumber scannerNumber = new ScannerNumber();
         QuadraticEquation quadraticEquation = new QuadraticEquation();
-        Factorial factorial = new Factorial();
-
 
         quadraticEquation.calculateRoot();
 
 
         System.out.println("Пожалуйста, введите аргумент для вычесления факториала:");
-        System.out.println(factorial.factorialCalc(scannerNumber.readInt()));
+        System.out.println(new Factorial().factorialCalc(scannerNumber.readInt()));
 
 
     }
