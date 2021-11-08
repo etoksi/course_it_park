@@ -2,7 +2,7 @@ package HW3;
 
 import java.util.Scanner;
 
-public class ScannerNumber {
+public class Input {
 
     Scanner scanner = new Scanner(System.in);
 
@@ -12,6 +12,11 @@ public class ScannerNumber {
 
     public double readDouble(){
         return scanner.nextDouble();
+    }
+
+    public String readString(){
+        return scanner.nextLine();
+
     }
 
 
