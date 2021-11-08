@@ -1,13 +1,9 @@
 package HW3;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Scanner;
 
 public class RunProgram {
 
     QuadraticEquation equation = new QuadraticEquation();
-    Factorial factorial = new Factorial();
 
     private static boolean flag = true;
 
