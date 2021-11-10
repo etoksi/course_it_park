@@ -6,15 +6,15 @@ public class Input {
 
     Scanner scanner = new Scanner(System.in);
 
-    public int readInt(){
+    public int readInt() {
         return scanner.nextInt();
     }
 
-    public double readDouble(){
+    public double readDouble() {
         return scanner.nextDouble();
     }
 
-    public String readString(){
+    public String readString() {
         return scanner.nextLine();
 
     }

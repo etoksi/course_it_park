@@ -9,7 +9,7 @@ public class RunProgram {
 
 
     public void menu() {
-        while(flag){
+        while (flag) {
             System.out.println("\n------------------------****-----------------------");
             System.out.println("""
                     Введите q, чтобы найти корни квадратного уравнения\s
@@ -32,7 +32,6 @@ public class RunProgram {
     }
 
     private void calculateFactorial() {
-
         System.out.println("Пожалуйста, введите аргумент для вычесления факториала:");
         int arg = new Input().readInt();
         System.out.println(arg + "! = " + new Factorial().factorialCalc(arg) + "\n");
