@@ -17,17 +17,18 @@ public class RunProgram {
                     Введите e для завершения""");
             System.out.println("------------------------****-----------------------\n");
 
-        }
-        switch (new Input().readString()) {
-            //Завершение программы:
-            case "e" -> flag = false;
 
-            //Вызов метода поиска квадратных уравнений для объекта класса  QuadraticEquation:
-            case "q" -> equation.calculateRoot();
+            switch (new Input().readString()) {
+                //Завершение программы:
+                case "e" -> flag = false;
 
-            //Вызов метода, который предлагает пользователю вести аоргумент для вычисления факториала
-            case "f" -> calculateFactorial();
-            default -> System.out.println("Был введен неверный символ. Повторите, пожалуйста");
+                //Вызов метода поиска квадратных уравнений для объекта класса  QuadraticEquation:
+                case "q" -> equation.calculateRoot();
+
+                //Вызов метода, который предлагает пользователю вести аоргумент для вычисления факториала
+                case "f" -> calculateFactorial();
+                default -> System.out.println("Был введен неверный символ. Повторите, пожалуйста");
+            }
         }
     }
 
