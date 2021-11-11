@@ -35,7 +35,7 @@ public class SquareRoot {
                     double result = (double) Math.round(i * 1000) / 1000;
                     System.out.println("Квадратный корень числа " + value + " равен " + result);
                     System.out.println("Проверка: " + result + " * " + result + " = " + result * result +
-                            ", погрешность: " + (value - result * result));
+                            ", погрешность вычисления: " + (value - result * result));
                     return;
 
                 }
