@@ -11,7 +11,6 @@ public class QuadraticEquation {
         if (a == 0) {
             System.out.println("Первый коэффициент не может быть равен нулю. Введите a:");
             return;
-
         }
         System.out.println("b:");
         double b = input.readDouble();
@@ -21,7 +20,6 @@ public class QuadraticEquation {
         if (discriminant < 0) {
             System.out.println("У квадратного уравнения нет действительных корней");
         } else if (discriminant == 0) {
-            double[] roots = new double[1];
             System.out.println("У данного уравнения один корень: " + (double) Math.round((-b) / (2 * a) * 100) / 100);
         } else {
             double root1 = (double) Math.round((-b + Math.pow(discriminant, 0.5)) / (2 * a) * 100) / 100;
