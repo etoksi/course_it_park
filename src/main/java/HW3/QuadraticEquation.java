@@ -9,7 +9,7 @@ public class QuadraticEquation {
         System.out.println("a:");
         double a = input.readDouble();
         if (a == 0) {
-            System.out.println("Первый коэффициент не может быть равен 0. Введите a:");
+            System.out.println("Первый коэффициент не может быть равен нулю. Введите a:");
             return;
 
         }

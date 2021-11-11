@@ -11,23 +11,23 @@ public class RunProgram {
     public void menu() {
         while (flag) {
             System.out.println("\n------------------------****-----------------------");
-            System.out.println("""
-                    Введите q, чтобы найти корни квадратного уравнения\s
-                    Введите f для того, чтобы вычислить факториал
-                    Введите e для завершения""");
+            System.out.println("Введите q, чтобы найти корни квадратного уравнения.\n" +
+                    " Введите f для того, чтобы вычислить факториал.\n" +
+                    " Введите e для завершения");
             System.out.println("------------------------****-----------------------\n");
 
 
             switch (new Input().readString()) {
                 //Завершение программы:
-                case "e" -> flag = false;
-
-                //Вызов метода поиска квадратных уравнений для объекта класса  QuadraticEquation:
-                case "q" -> equation.calculateRoot();
-
+                case "e" :
+                    flag = false;//Вызов метода поиска квадратных уравнений для объекта класса  QuadraticEquation:
+                case "q" :
+                    equation.calculateRoot();
                 //Вызов метода, который предлагает пользователю вести аргумент для вычисления факториала
-                case "f" -> calculateFactorial();
-                default -> System.out.println("Был введен неверный символ. Повторите, пожалуйста");
+                case "f" :
+                    calculateFactorial();
+                default :
+                    System.out.println("Был введен неверный символ. Повторите, пожалуйста");
             }
         }
     }

@@ -12,5 +12,4 @@ public class Factorial {
         return factorialCalc(arg - 1);
     }
 
-
 }

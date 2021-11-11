@@ -4,8 +4,7 @@ public class MainMath {
 
     public static void main(String[] args) {
 
-        new RunProgram().menu(); // Вызываем контекстное меню из класса RunProgram
-
+        new RunProgram().menu(); // Вызывает контекстное меню из класса RunProgram
     }
 
 }
