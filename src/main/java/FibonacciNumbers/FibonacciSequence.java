@@ -33,8 +33,8 @@ public class FibonacciSequence {
             case 2:
             case 3:
                 return 1;
-            //default здесь смысла не имеет, так как мы проверяем значение при чтении файла с консоли
-            //SonarLint страшно ругается на его отсутствие, но он тут очевидно не имеет смысла
+            //default здесь смысла не имеет, так как мы проверяем значение при чтении файла с консоли,
+            //хотя SonarLint страшно ругается на его отсутствие.
         }
         return fibonacciRecursive(number - 1) + fibonacciRecursive(number - 2);
     }
