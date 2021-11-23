@@ -14,6 +14,12 @@ public class Fibonacci {
             System.out.println(Arrays.toString(arrayOfFibonacciNumbers));
             return arrayOfFibonacciNumbers[index - 1];
         }
+        else if(arrayOfFibonacciNumbers[index-2] != 0 && arrayOfFibonacciNumbers[index - 3] != 0){
+            System.out.println("Calculated from array values");
+            arrayOfFibonacciNumbers[index - 1] =  arrayOfFibonacciNumbers[index - 2] + arrayOfFibonacciNumbers[index - 3];
+            System.out.println(Arrays.toString(arrayOfFibonacciNumbers));
+            return arrayOfFibonacciNumbers[index - 1];
+        }
         arrayOfFibonacciNumbers[index - 1] = calculateFibonacciNumber(index);
         System.out.println("Calculated recursive. Array was modified: ");
         System.out.println(Arrays.toString(arrayOfFibonacciNumbers));
