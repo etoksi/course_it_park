@@ -1,6 +1,7 @@
 package HW7;
 
 public class Cat extends Animal {
+    private static final int MAX_RUN_DISTANCE = 200;
 
     public Cat(String name) {
         super(name);
@@ -13,7 +14,7 @@ public class Cat extends Animal {
 
     @Override
     public void run(int runDistance) {
-        if (runDistance <= 200) {
+        if (runDistance <= MAX_RUN_DISTANCE) {
             super.run(runDistance);
         } else {
             System.out.println(super.getName() + " run only 200 meters.");
