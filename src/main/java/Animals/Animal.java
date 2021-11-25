@@ -1,6 +1,7 @@
-package HW7;
+package Animals;
 
 public class Animal {
+
     private String name;
 
     public Animal(String name) {
@@ -15,7 +16,12 @@ public class Animal {
         System.out.println(this.name + " run " + runDistance + " meters");
     }
 
+    public void produceSound(){
+        System.out.print(getName() + " ");
+    }
+
     public String getName() {
         return name;
     }
 }
+

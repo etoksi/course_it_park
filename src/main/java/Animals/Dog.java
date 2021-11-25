@@ -1,8 +1,9 @@
-package HW7;
+package Animals;
 
 public class Dog extends Animal {
     private static final int MAX_RUN_DISTANCE = 500;
     private static final int MAX_SWIM_DISTANCE = 10;
+    private static final String PRODUCED_SOUND = "barks";
 
     public Dog(String name) {
         super(name);
@@ -24,5 +25,11 @@ public class Dog extends Animal {
         } else {
             System.out.println(super.getName() + " run only 500 meters");
         }
+    }
+
+    @Override
+    public void produceSound(){
+        super.produceSound();
+        System.out.println(PRODUCED_SOUND);
     }
 }
