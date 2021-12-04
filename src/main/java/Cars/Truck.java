@@ -13,7 +13,7 @@ public final class Truck extends Automobile {
         if (moveDistance <= MAX_DISTANCE) {
             System.out.println("Truck " + getModel() + " with number " + getNumber() + " moved " + moveDistance + " kilometers");
         } else {
-            System.out.println("Truck " + getModel() + " with number " + getNumber() + " moved " + MAX_DISTANCE + " out of " + moveDistance + ". Truck is out of fuel.");
+            System.out.println("Truck " + getModel() + " with number " + getNumber() + " moved " + MAX_DISTANCE + " out of the " + moveDistance + ". Truck is out of fuel.");
 
         }
     }

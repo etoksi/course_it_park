@@ -15,7 +15,7 @@ public class CarsMain {
         automobiles[5] = new Truck("volvo", "a006ac01");
         automobiles[6] = new Car("toyota", "a007ac01");
         automobiles[7] = new Truck("ram", "a008ac01");
-        automobiles[8] = new Car("skoda", "a009ac01");
+        automobiles[8] = new Car("skoda", "a009ac02");
         automobiles[9] = new Truck("GMC", "a010ac01");
 
         moveAutos(automobiles);

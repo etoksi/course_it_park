@@ -2,8 +2,8 @@ package Cars;
 
 public abstract class Automobile {
 
-    private String model;
-    private String number;
+    private final String model;
+    private final String number;
 
     protected Automobile(String model, String number) {
         this.model = model;
