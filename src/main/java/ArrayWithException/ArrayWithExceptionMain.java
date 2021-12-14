@@ -22,7 +22,6 @@ public class ArrayWithExceptionMain {
         //System.out.println(sumArrayValues(arr1)); // Array 5*10 throws MyArraySizeException
         //System.out.println(sumArrayValues(arr2));// No exception
         System.out.println(sumArrayValues(arr3)); //MyArrayDataException - one of the values can't be converted to int
-
     }
 
     private static void fillArray(String[][] arr, Random random) {
