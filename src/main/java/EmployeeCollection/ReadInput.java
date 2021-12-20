@@ -15,6 +15,9 @@ public class ReadInput {
     }
 
     public String readText(){
+        while (!scanner.hasNextLine()) {
+            scanner.next();
+        }
         return scanner.nextLine();
     }
 }

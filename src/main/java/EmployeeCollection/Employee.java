@@ -1,6 +1,7 @@
 package EmployeeCollection;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class Employee {
@@ -35,16 +36,17 @@ public class Employee {
         return enrollmentDate;
     }
 
-    public double getExperience(){
+    public double getExperience() {
         return ChronoUnit.YEARS.between(this.enrollmentDate, LocalDate.now());
+    }
+
+    public String printExperience() {
+        return "\nid " + getId() + " Name: " + getName() + " " + getSurname() + " Works for: " + Math.round(getExperience()) + " years";
     }
 
     @Override
     public String toString() {
-        return "\nid " + getId() + " Name: " + getName() + " " + getSurname() + " Experience: " + Math.round(getExperience()) + " years";
-    }
+        return "\nid " + getId() + " Name: " + getName() + " " + getSurname() + " Date of enrollment:  " + getEnrollmentDate().format(DateTimeFormatter.ofPattern("dd MMMM YYYY"));
 
-    public String printExperience(){
-        return "\nid " + getId() + " Name: " + getName() + " " + getSurname() + " Date of enrollment:  " + getEnrollmentDate() + " years";
     }
 }
