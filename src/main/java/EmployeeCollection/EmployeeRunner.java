@@ -90,7 +90,7 @@ public class EmployeeRunner {
     }
 
     public static void printEmployeeWithExperience(){
-        System.out.println("Enter minimal experience");
+        System.out.println("Enter minimal experience value: ");
         int years = new ReadInput().readNumber();
         Iterator<Employee> employeeIterator = employees.iterator();
         while (employeeIterator.hasNext()) {

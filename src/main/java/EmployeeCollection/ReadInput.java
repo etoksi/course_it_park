@@ -9,7 +9,7 @@ public class ReadInput {
     public int readNumber() {
         while (!scanner.hasNextInt()) {
             scanner.next();
-            System.out.println("No such choice in menu. Please, try again");
+            System.out.println("Wrong input");
         }
         return scanner.nextInt();
     }

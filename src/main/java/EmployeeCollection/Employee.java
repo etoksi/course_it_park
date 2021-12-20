@@ -46,7 +46,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "\nid " + getId() + " Name: " + getName() + " " + getSurname() + " Date of enrollment:  " + getEnrollmentDate().format(DateTimeFormatter.ofPattern("dd MMMM YYYY"));
+        return "\nid " + getId() + " Name: " + getName() + " " + getSurname() + " Date of enrollment:  " + getEnrollmentDate().format(DateTimeFormatter.ofPattern("dd MMMM yyyy"));
 
     }
 }
