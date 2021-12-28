@@ -19,7 +19,7 @@ public class Reader {
 
     @NotNull
     private static List<String> getStringList(String s) {
-        return List.of(s.split("[ \n\\-.,:;\"+]+"));
+        return List.of(s.toLowerCase(Locale.ROOT).split("[ \n\\-.,:;\"+]+"));
     }
 
     private static void sortWordsByFrequency(List<String> list) {
