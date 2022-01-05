@@ -17,14 +17,6 @@ public class Main {
         runExecutors();
     }
 
-    private static void runExecutors() {
-        System.out.println("multiple threads");
-        int maxNumberOfThreads = Runtime.getRuntime().availableProcessors();
-        ExecutorService service = Executors.newFixedThreadPool(maxNumberOfThreads);
-        service.execute(new StatThread(list));
-        service.shutdown();
-    }
-
     private static void runOneThread() throws InterruptedException {
         System.out.println("1 thread");
         Runnable statThread = new StatThread(list);
@@ -37,5 +29,13 @@ public class Main {
         for (int i = 0; i < 1000000; i++) {
             list.add(new Random().nextInt(1000));
         }
+    }
+
+    private static void runExecutors() {
+        System.out.println("multiple threads");
+        int maxNumberOfThreads = Runtime.getRuntime().availableProcessors();
+        ExecutorService service = Executors.newFixedThreadPool(maxNumberOfThreads);
+        service.execute(new StatThread(list));
+        service.shutdown();
     }
 }

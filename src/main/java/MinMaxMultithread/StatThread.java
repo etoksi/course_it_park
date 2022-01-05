@@ -1,7 +1,7 @@
 package MinMaxMultithread;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.NoSuchElementException;
 
 public class StatThread implements Runnable {
 
@@ -13,14 +13,23 @@ public class StatThread implements Runnable {
 
     @Override
     public void run() {
-        long start = System.currentTimeMillis();
-        Integer max = this.integerList.stream().max(Integer::compare).get();
-        Integer min = this.integerList.stream().min(Integer::compare).get();
-        double avg = (double) this.integerList.stream().mapToInt(Integer::intValue).sum() /this.integerList.size();
+        long startTime = System.currentTimeMillis();
+        Integer max = this.integerList
+                .stream()
+                .mapToInt(v -> v)
+                .max().orElseThrow(NoSuchElementException::new);
+        Integer min = this.integerList
+                .stream()
+                .mapToInt(v -> v)
+                .min().orElseThrow(NoSuchElementException::new);
+        double avg = this.integerList
+                .stream()
+                .mapToInt(v -> v)
+                .average().orElseThrow(NoSuchElementException::new);
         System.out.println("max: " + max);
         System.out.println("min: " + min);
         System.out.println("avg: " + avg);
         System.out.print("execution time: ");
-        System.out.println(System.currentTimeMillis() - start);
+        System.out.println(System.currentTimeMillis() - startTime);
     }
 }
